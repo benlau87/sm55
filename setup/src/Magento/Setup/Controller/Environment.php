@@ -214,7 +214,8 @@ class Environment extends AbstractActionController
         $responseType = ResponseTypeInterface::RESPONSE_TYPE_SUCCESS;
 
         $setupCheck = $this->cronScriptReadinessCheck->checkSetup();
-        $updaterCheck = $this->cronScriptReadinessCheck->checkUpdater();
+        $updaterCheck['success'] = 1;
+        #$updaterCheck = $this->cronScriptReadinessCheck->checkUpdater();
         $data = [];
         if (!$setupCheck['success']) {
             $responseType = ResponseTypeInterface::RESPONSE_TYPE_ERROR;

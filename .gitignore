@@ -10,7 +10,6 @@ atlassian*
 /.idea
 /.gitattributes
 /app/config_sandbox
-/app/etc/config.php
 /app/etc/env.php
 /app/code/Magento/TestModule*
 /lib/internal/flex/uploader/.actionScriptProperties
@@ -23,9 +22,47 @@ atlassian*
 /lib/internal/flex/varien/.settings
 /node_modules
 /.grunt
+/Gruntfile.js
+/package.json
+/.php_cs
+/.php_cs.cache
+/grunt-config.json
+/dev/tools/grunt/configs/local-themes.js
 
-/pub/media/*.*
+/dev/tests/*/framework
+/dev/tests/*/testsuite/Magento
+/dev/tests/*/tmp
+/dev/tests/*/etc
+/dev/tests/*/*.*
+/dev/tests/*.*
+/dev/tests/api-functional/config
+/dev/tests/api-functional/_files/Magento
+/dev/tests/js/JsTestDriver/framework
+/dev/tests/js/JsTestDriver/testsuite/lib
+/dev/tests/js/JsTestDriver/testsuite/mage
+/dev/tests/js/JsTestDriver/*.*
+/dev/tests/js/jasmine/assets
+/dev/tests/js/jasmine/spec_runner
+/dev/tests/js/jasmine/tests/app/code/Magento
+/dev/tests/js/jasmine/tests/lib/mage
+/dev/tests/js/jasmine/*.*
+/dev/tests/performance
+/dev/tests/functional/lib/Magento
+/dev/tests/functional/tests/app/Magento
+/dev/tests/functional/testsuites/Magento
+/dev/tests/functional/utils
+
+/dev/tools/Magento
+/dev/tools/grunt
+/dev/tools/*.*
+
+/dev/*.*
+
+# /pub/media/*.*
 !/pub/media/.htaccess
+/pub/media/attribute/*
+!/pub/media/attribute/.htaccess
+/pub/media/analytics/*
 /pub/media/catalog/*
 !/pub/media/catalog/.htaccess
 /pub/media/customer/*
@@ -37,7 +74,7 @@ atlassian*
 /pub/media/theme/*
 /pub/media/theme_customization/*
 !/pub/media/theme_customization/.htaccess
-/pub/media/wysiwyg/*
+# /pub/media/wysiwyg/*
 !/pub/media/wysiwyg/.htaccess
 /pub/media/tmp/*
 !/pub/media/tmp/.htaccess
@@ -49,3 +86,6 @@ atlassian*
 !/var/.htaccess
 /vendor/*
 !/vendor/.htaccess
+/generated/*
+!/generated/.htaccess
+app/etc/config.php
