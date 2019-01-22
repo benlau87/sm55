@@ -53,12 +53,16 @@
     },
     "minimum-stability": "alpha",
     "prefer-stable": true,
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        "emizentech-magento2-category-widget": {
+            "type": "vcs",
+            "url": "https://github.com/emizentech/magento2-category-list-widget/"
         }
-    ],
+    },
     "extra": {
         "magento-force": "override"
     }

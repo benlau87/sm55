@@ -1,0 +1,37 @@
+<?php
+	$categories = $this->getCategoryCollection();
+?>
+<div class="row">
+<?php foreach($categories as $category):?>
+    <div class="col-12 col-md-6 col-xl-4">
+        <div class="category-list-top">
+            <div class="row no-gutters">
+                <div class="col">
+                    <a href="<?php echo $block->escapeUrl($category->getUrl()) ?>">
+                        <?php
+                        $cat = $this->getCategorymodel($category->getId());
+                        $image = $cat->getImageUrl();
+
+                        if($image):?>
+                            <img src="<?php echo $block->escapeUrl($image) ?>" alt="" width="<?=$this->getImageWidth();?>" height="<?=$this->getImageHeight()?>"/>
+                        <?php endif;?>
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="title"><a href="<?php echo $block->escapeUrl($category->getUrl()) ?>"><?php echo $block->escapeHtml($category->getName()) ?></a></div>
+                    <ul>
+                        <?php
+                        $subcategories = $this->getCategoryChildren($category->getId());
+                        foreach($subcategories as $subcategory):
+                            ?>
+                            <li><a href="<?php echo $block->escapeUrl($subcategory->getUrl()) ?>"><?php echo $block->escapeHtml($subcategory->getName()) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+endforeach;
+?>
+</div>

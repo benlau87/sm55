@@ -2,25 +2,34 @@
   General Colors
  */
 
-.layout05 .vertical-menu .navigation .level0.level-top:hover > a { color: #fff; }
-.box-tocart .actions .tocart, .box-tocart .instant-purchase, .action.primary, .action.secondary { color: #fff; }
+.layout05 .vertical-menu .navigation .level0.level-top:hover > a, .social-btn .btn-social,
+.box-tocart .actions .tocart, .box-tocart .instant-purchase, .action.secondary,
+.product-btn button:hover, .product-btn a:hover, .smartmenu li:hover .mbi,
+.minicart-wrapper .action.showcart .counter.qty {
+  color: #fff;
 
-.login-container .remind { color: @main3_color; }
-
-.main a { color: @main_color;
-
-  &:hover {
-    color: @main2_color;
+  &:hover, &:active, &:focus {
+    color: #fefefe;
   }
 }
 
-.product-btn button:hover, .product-btn a:hover { color: #fff; }
+.action.primary, .sticky-menu.active a { color: #fff }
+
+.login-container .remind, .wrapper-breadcrums li a:hover { color: @main3_color; }
+
+.main a, .action.back, .action.print, .action.track, .action.edit, .action.view, .action.change-password, .action.order {
+  color: @main_color;
+
+  &:hover {
+    color: @main3_color;
+  }
+}
 
 /**
   Layout
  */
 .header-main-inner .vertical-menu:before { display: none; }
-
+.minicart-items .product-item-pricing .label { width: 6rem; }
 
 
 /**

@@ -1,0 +1,35 @@
+<?php
+	$categories = $this->getCategoryCollection();
+	$canShowImg = $this->canShowImage();
+?>
+<?php foreach($categories as $category):?>
+    <ul class="mr-footer-links">
+        <li class="cat-id-<?= $category->getId(); ?>">
+            <strong class="w-title">
+        	<a href="<?php echo $block->escapeUrl($category->getUrl()) ?>">
+        		<?php if($canShowImg && $category->getImageUrl()):?>
+        			<img src="<?php echo $block->escapeUrl($cat->getImageUrl()) ?>" alt="" width="<?=$this->getImageWidth();?>" height="<?=$this->getImageHeight()?>"/>
+        		<?php else:?>
+        		<span class="cat-title"><?php echo $block->escapeHtml($category->getName()) ?></span>
+        		<?php endif;?>
+        	</a>
+            </strong>
+        </li>
+        <li>
+            <?php
+            $subcategories = $this->getCategoryChildren($category->getId());
+            foreach($subcategories as $subcategory):
+                ?>
+                <a href="<?php echo $block->escapeUrl($subcategory->getUrl()) ?>">
+                    <?php if($canShowImg && $subcategory->getImageUrl()):?>
+                        <img src="<?php echo $block->escapeUrl($cat->getImageUrl()) ?>" alt="" width="<?=$this->getImageWidth();?>" height="<?=$this->getImageHeight()?>"/>
+                    <?php else:?>
+                        <span class="cat-title"><?php echo $block->escapeHtml($subcategory->getName()) ?></span>
+                    <?php endif;?>
+                </a>
+            <?php endforeach; ?>
+        </li>
+    </ul>
+    <?php
+endforeach;
+?>
