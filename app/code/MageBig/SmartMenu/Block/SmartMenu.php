@@ -329,6 +329,10 @@ class SmartMenu extends \Magento\Framework\View\Element\Template
                 $html .= '</div>';
             }
         }
+
+        if($catLevel == 0 && $hasActiveChildren)
+            $html .= '<div class="nav-bg"></div>';
+
         $html .= '<a href="' . $cat_link . '"' . $linkClass . $noclick . '>';
 
         $iconHtml = $catData->getData('smartmenu_cat_icon');
@@ -343,7 +347,7 @@ class SmartMenu extends \Magento\Framework\View\Element\Template
         if ($catLevel == 1) {
             $html .= '<span class="title_group">' . __($this->escapeHtml($catInfo->getName())) . $labelCategory . '</span>';
         } else {
-            $html .= '<span>' . __($this->escapeHtml($catInfo->getName())) . $labelCategory . '</span>';
+            $html .= ($catLevel==0 ? '<span class="cat-icon"></span><span class="cat-name">' : '<span>') . __($this->escapeHtml($catInfo->getName())) . $labelCategory . '</span>';
         }
         $html .= '</a>';
         if ($hasActiveChildren && $catLevel == 0) {

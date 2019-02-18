@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © BrainActs Commerce OÜ. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+/**
+ * @var \BrainActs\RewardPoints\Block\Adminhtml\Order\Creditmemo\View\Points $block
+ * @codingStandardsIgnoreFile
+ */
+
+?>
+<?php $_source  = $block->getSource() ?>
+<?php if ($_source): ?>
+    <tr>
+        <td class="label"><?= /* @escapeNotVerified */ $block->getLabel() ?></td>
+        <td>
+            <?= /* @escapeNotVerified */ $block->getPointsValue() ?>
+        </td>
+    </tr>
+<?php endif; ?>

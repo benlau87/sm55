@@ -45,7 +45,7 @@
                 $(window).scroll(function() {
                     var $win = $(this);
                     var curWinTop = $win.scrollTop();
-                    if (curWinTop > threshold) {
+                    if (curWinTop > threshold && !$('body').hasClass('catalog-product-view')) {
                         $stickyMenu.addClass('active');
                     } else {
                         $stickyMenu.removeClass('active');

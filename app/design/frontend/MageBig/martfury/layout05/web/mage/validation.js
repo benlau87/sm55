@@ -1672,21 +1672,21 @@
     });
     $.validator.messages = $.extend($.validator.messages, {
         required: $.mage.__('Dies ist ein Pflichtfeld.'),
-        remote: $.mage.__('Please fix this field.'),
-        email: $.mage.__('Please enter a valid email address.'),
-        url: $.mage.__('Please enter a valid URL.'),
-        date: $.mage.__('Please enter a valid date.'),
+        remote: $.mage.__('Bitte dieses Feld korrigieren.'),
+        email: $.mage.__('Bitte gültige E-Mail-Adresse eingeben.'),
+        url: $.mage.__('Bitte gültige URL eingeben.'),
+        date: $.mage.__('Bitte gültiges Datum eingeben.'),
         dateISO: $.mage.__('Please enter a valid date (ISO).'),
-        number: $.mage.__('Please enter a valid number.'),
-        digits: $.mage.__('Please enter only digits.'),
-        creditcard: $.mage.__('Please enter a valid credit card number.'),
-        equalTo: $.mage.__('Please enter the same value again.'),
-        maxlength: $.validator.format($.mage.__('Please enter no more than {0} characters.')),
-        minlength: $.validator.format($.mage.__('Please enter at least {0} characters.')),
-        rangelength: $.validator.format($.mage.__('Please enter a value between {0} and {1} characters long.')),
-        range: $.validator.format($.mage.__('Please enter a value between {0} and {1}.')),
-        max: $.validator.format($.mage.__('Please enter a value less than or equal to {0}.')),
-        min: $.validator.format($.mage.__('Please enter a value greater than or equal to {0}.'))
+        number: $.mage.__('Bitte gültige Nummer eingeben.'),
+        digits: $.mage.__('Bitte nur Zahlen eingeben.'),
+        creditcard: $.mage.__('Bitte geben Sie eine gültige Kreditkartennummer ein.'),
+        equalTo: $.mage.__('Die Passwörter stimmen nicht überein.'),
+        maxlength: $.validator.format($.mage.__('Bitte nicht mehr als {0} Zeichen eingeben.')),
+        minlength: $.validator.format($.mage.__('Bitte min. {0} Zeichen eingeben.')),
+        rangelength: $.validator.format($.mage.__('Bitte geben Sie einen Wert zwischen {0} und {1} Zeichen ein.')),
+        range: $.validator.format($.mage.__('Bitte geben Sie einen Wert zwischen {0} und {1} an.')),
+        max: $.validator.format($.mage.__('Bitte geben Sie einen niedrigeren oder den gleichen Wert wie {0} an.')),
+        min: $.validator.format($.mage.__('Bitte geben Sie einen höheren oder den gleichen Wert wie  {0} an.'))
     });
 
     if ($.metadata) {

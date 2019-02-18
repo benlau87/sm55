@@ -1,0 +1,38 @@
+[2.1.5]  - 10/25/18
+### Added
+    - Import History
+
+[2.1.4]  - 10/23/18
+### Fixed
+    - Bug Fixes
+
+[2.1.3]  - 07/08/18
+### Added
+    - Add pagination to history section in my account area
+    - Add reward points to my account drop down
+
+[2.1.2]  - 19/07/18
+### Added
+    - Localization (en_US, uk_UA)
+
+### Fixed
+    - Fix issue on shopping cart
+    - Fix issue with virtual products
+
+[2.1.0]  - 08/07/18
+### Added
+    - Added reward points information to the total section in the order email
+    - Added reward points information to the total section in the invoice email
+    - Added reward points information to the total section in the invoice PDF
+
+[2.0.8] - 05/11/18
+
+### Fixed
+    - Fix conflict with IWD OPC(free) extension
+
+[2.0.6] - 03/23/18
+
+### Fixed
+    - Fix issue with paypal express checkout
+    - Prevent create history item without customer
+    - Bug Fixes

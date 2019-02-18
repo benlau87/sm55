@@ -2,31 +2,43 @@
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
 	<widget id="benlau_categoryfooterwidget" class="Benlau\CategoryFooterWidget\Block\Widget\CategoryFooterWidget">
-		<label translate="true">Category Footer List Widget</label>
+		<label translate="true">Category Simple List Widget</label>
 		<description>Store Default 1st &amp; 2nd level Category Footer List Widget</description>
 		<parameters>
-			<parameter name="image" xsi:type="select" required="true" visible="true">
-                	<label translate="true">Image Type</label>
-                <options>
-                    <option name="default" value="no-image" selected="true">
-                        <label translate="true">No Image</label>
-                    </option>
-                    <option name="image" value="image">
-                        <label translate="true">With Image</label>
-                    </option>
-                </options>
-            </parameter>
-			<parameter name="imagewidth" xsi:type="text"  visible="true" sort_order="2">
-				<label translate="true">Image Width</label>
-				<description translate="true">Enter Image width Ex. 250 , do not suffix with px</description>
-                		<value>250</value>
+			<parameter name="display_style" xsi:type="select" required="true" visible="true">
+				<label translate="true">Anzeige-Stil</label>
+				<options>
+					<option name="default" value="footer" selected="true">
+						<label translate="true">Footer</label>
+					</option>
+					<option name="image" value="list">
+						<label translate="true">Einfache Liste</label>
+					</option>
+				</options>
 			</parameter>
-			<parameter name="imageheight" xsi:type="text"  visible="true" sort_order="3">
-				<label translate="true">Image Height</label>
-				<description translate="true">Enter Image Height Ex. 250 , do not suffix with px</description>
-                		<value>250</value>
+			<parameter name="show_heading" xsi:type="select" visible="true">
+				<label translate="true">Überschrift (Parent Cat)</label>
+				<options>
+					<option name="default" value="1">
+						<label>Anzeigen</label>
+					</option>
+					<option name="image" value="0" selected="true">
+						<label>Verbergen</label>
+					</option>
+				</options>
 			</parameter>
-			<parameter name="parentcat" xsi:type="text"  visible="true" sort_order="10">
+			<parameter name="depth" xsi:type="select" required="true" visible="true">
+				<label>Kategorie-Level</label>
+				<options>
+					<option name="default" value="1" selected="true">
+						<label>1 (Standard)</label>
+					</option>
+					<option name="image" value="2">
+						<label>2</label>
+					</option>
+				</options>
+			</parameter>
+			<parameter name="parentcat" xsi:type="text"  visible="true" required="true" sort_order="10">
 				<label translate="true">Specific Parent Category ID</label>
 				<description translate="true">Default Category of Current Store will be used in case of Blank</description>
 			</parameter>

@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © BrainActs Commerce OÜ. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var \BrainActs\RewardPoints\Block\Link $block */
+?>
+<li class="link reward" data-bind="scope: 'reward'">
+    <a <?= /* @noEscape */ $block->getLinkAttributes() ?>><?= $block->escapeHtml($block->getLabel()) ?>
+        <!-- ko if: reward().counter -->
+        <span data-bind="text: reward().counter" class="counter qty"></span>
+        <!-- /ko -->
+    </a>
+</li>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "reward": {
+                        "component": "BrainActs_RewardPoints/js/view/reward"
+                    }
+                }
+            }
+        }
+    }
+</script>

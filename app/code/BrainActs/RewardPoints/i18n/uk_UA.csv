@@ -1,0 +1,134 @@
+Reward Points History,Reward Points History
+ID,ID
+Rule Name,Назва Правила
+Points,Бали
+Created,Створенно
+Reason,Причина
+Modifier,Модифікував
+Reward Points,Нагороджувальні бали
+Customer,Покупець
+Please fill email or name,"Будь ласка, введіть ім'я або електронну адресу"
+Action,Дія
+Delete,Видалити правило
+Are you sure you want to delete this?,"Ви впевнені, що хочете видалити елемент? "
+Reset,Скинути
+Save and Continue Edit,Зберегти і продовжити редагування
+Save,Зберегти
+Conditions,Умови
+Apply the rule only if the following conditions are met.,"Застосовати правило лише в тому випадку, якщо виконуються наступні умови."
+Back To Rules,Назад до Правил
+Delete Rule,Видалити правило
+Are you sure you want to do this?,Ви впевнені?
+Save Rule,Зберегти Правило
+Reward Points,Призові бали
+You deleted the history item.,Ви видалили історію
+We can't find a history item to delete.,Неможливо знайти елемент для видалення
+History,Історія
+Custom Update By Manager,Ручна зміна менеджером
+You apply additional rule to customer.,Ви примінили додаткове плавило до користувача
+We can't  apply additional rule to customer.,Неможливо застосувати додаткове правило для користувача
+You deleted the rule.,Ви видалили правило.
+We can't delete the rule right now. Please review the log and try again.,Неможливо видалити правило. Перегляньте журнал помилокг та спробуйте ще раз.
+We can't find a rule to delete.,Неможливо знайти правило для видалення.
+This rule no longer exists.,Правило не існуе.
+Edit Rule,Редагувати Правило
+New Rule,Нове правило
+New Reward Points Rule,Нове правило для отримання призових балів
+Earning Rules,Нарахування
+A total of %1 record(s) have been deleted.,Загалом %1 записів було видалено
+The wrong rule is specified.,Неправильне правило вказане.
+You saved the rule.,Правило збережене.
+Something went wrong while saving the rule data. Please review the error log.,"Під час збереження даних правил виникла помилка. Будь ласка, перегляньте журнал помилок."
+Manage Rules,Управління правилами
+This Rule no longer exists.,Це правило більше не існує.
+Rules,Правила
+Spending Rules,Правила витрат
+"This rule will conflict with another rule: ""%1""","Це правило буде конфліктувати з іншим правилом: ""% 1"""
+Page Title,Назва сторінки
+Customer Group,Група клієнтів
+Store,Магазин
+Amount,Сума
+Status,Статус
+"To apply changes you should fill in hidden required ""%1"" field","Щоб примінити зміни ви повинні заповнити обов'язкове ""%1"" поле"
+Something went wrong while saving the rule.,Під час збереження правила сталася помилка.
+We cannot apply the reward points.,Неможливо застосувати призові бали
+"We applied ""%1"" points.","Було примінено  ""%1"" балів."
+Page not found.,Сторінку не знайдено
+Fixed,Виправлено
+For Each X Spend Customer Receive Y Points,За кожні X витрачено користувач отримає Y балів
+ -- Without Restriction  -- , -- Без обмежень  --
+Active,Активне
+Inactive,Неактивне
+Yes,Так
+No,Ні
+Day(s),День(дні)
+Cart %1 doesn't contain products,У корзині %1 немає продуктів
+Could not apply reward points,Неможливо застосувати призові бали
+Spend Reward Points,Витратити призові бали
+End Date must follow Start Date.,Кінцева дата повинна відповідати початковій даті
+Please specify a website.,"Будь ласка, вкажіть вебсайт"
+Please specify Customer Groups.,"Будь ласка, вкажіть групу користувачів"
+Enabled,Увімкнено
+Disabled,Вимкнено
+You will receive %1 points after registration.,Ви отримаєте %1 балів після реєстрації.
+%1 Reward Points have been added to your balance.,%1 Призових балів було додано до вашого балансу.
+You will receive %1 points for sharing the wish list.,"Ви отримаєте %1 балів за те, що поділитесь своїм списком бажань."
+Registration,Реєстрація
+Submit Review,Надіслати відгук
+Share Wish List,Поділитись списком бажань
+Edit,Редагувати
+Delete ${ $.$data.name },Видалити ${ $.$data.name }
+Are you sure you wan't to delete a ${ $.$data.name } record?,Ви впевнені що бажаєте видалити ${ $.$data.name } запис?
+Delete record for ${ $.$data.customer_name },Видалити запис для ${ $.$data.customer_name }
+Are you sure you wan't to delete record for ${ $.$data.customer_name } ?,"Ви впевнені, що бажаєте видалити запис для  ${ $.$data.customer_name } ?"
+All Store Views,Всі магазини
+All Websites,Всі вебсайти
+Reward Points Information,Інформація про призові бали
+Current Points:,Поточні бали:
+You have %1 points.,Ви маєте %1 балів.
+Enter Points to Spend,Введіть кількість балів для списання
+Apply Points,Примінити бали
+You have %1 point(s),Ви маєте  %1 бал(ів)
+You have no reward points history.,Ви не маєте історії призових балів
+Apply Reward Points,Примінити призові бали
+Add/Remove Reward Points,Додати/видалити призові бали
+Attention,Увага
+"The customer needs to be chosen from the drop-down. If you cannot find the customer, check if name or email is correct.","Потрібно вибрати клієнта з випадаючого списку. Якщо ви не можете знайти клієнта, перевірте правильність імені чи електронної пошти."
+Reward points was successfully applied.,Призові бали були успішно застосовані
+You have %1 point(s). You can spend maximum %2 point(s).,Ви маєте %1 бал(ів). Ви можете витратити максимально %2 бал(ів).
+You have %1 points.(%2),Ви маєте %1 балів.(%2)
+Spend Rule,Правило витрат
+Earning Rule,Правило отримання
+Reward Points Section,Reward Points Section
+Extension Info,Інформація про модуль
+Installed Version,Встановлена версія
+Latest Version,Остання версія
+General Options,Загальні налаштування
+Enable at Front-End,Включити
+Simple Rules,Прості правила
+Cart Price Rule,Правило ціни в кошику
+Rule Information,Інформація про правило
+Description,Опис
+Websites,Вебсайти
+Customer Groups,Групи користувачів
+From,Від
+To,До
+Priority,Пріоритет
+Actions,Дії
+Type,Тип
+X Spend,X витрачено
+Y Receive,Y отримано
+Discard subsequent rules,Відхилити наступні правила
+Add Rule,Додати правило
+Delete items,Видалити елементи
+Are you sure you wan't to delete selected items?,"Ви впевнені, що бажаєте видалити вибрані елементи? "
+Website,Вебсайт
+Start,Початок
+End,Закінчення
+Add/Remove Points,Додати/видалити бали
+Store View,Перегляд магазину
+Customer Name,Ім'я клієнта
+Rule,Правило
+Order ID,Рахунок ID
+Page Information,Інформація про сторінку
+Enable Rule,Увімкнути правило

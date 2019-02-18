@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © BrainActs Commerce OÜ. All rights reserved.
+  ~ See LICENSE.txt for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Sales:etc/pdf_file.xsd">
+
+    <totals>
+        <total name="reward_points">
+            <title translate="true">Reward Points</title>
+            <source_field>reward_points_amount</source_field>
+            <font_size>7</font_size>
+            <display_zero>false</display_zero>
+            <sort_order>110</sort_order>
+            <model>BrainActs\RewardPoints\Model\Sales\Pdf\RewardPoints</model>
+        </total>
+    </totals>
+</config>

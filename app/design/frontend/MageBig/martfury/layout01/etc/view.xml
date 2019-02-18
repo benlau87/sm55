@@ -95,20 +95,20 @@
             <image id="product_page_image_large" type="small_image"/>
             <image id="product_page_image_large_hover" type="thumbnail"/>
             <image id="product_page_image_medium" type="image">
-                <width>700</width>
-                <height>700</height>
+                <width>400</width>
+                <height>400</height>
             </image>
             <image id="product_page_image_small" type="thumbnail">
                 <width>65</width>
                 <height>65</height>
             </image>
             <image id="product_page_main_image" type="image">
-                <width>700</width>
-                <height>700</height>
+                <width>400</width>
+                <height>400</height>
             </image>
             <image id="product_page_main_image_default" type="image">
-                <width>700</width>
-                <height>700</height>
+                <width>400</width>
+                <height>400</height>
             </image>
             <image id="product_page_more_views" type="thumbnail">
                 <width>65</width>
@@ -234,7 +234,7 @@
             <var name="keyboard">true</var> <!-- Turn on/off keyboard arrows navigation (true/false) -->
             <var name="arrows">true</var> <!-- Turn on/off arrows on the sides preview (true/false) -->
             <var name="caption">true</var> <!-- Display alt text as image title (true/false) -->
-            <var name="allowfullscreen">true</var> <!-- Turn on/off fullscreen (true/false) -->
+            <var name="allowfullscreen">false</var> <!-- Turn on/off fullscreen (true/false) -->
             <var name="navdir">vertical</var> <!-- Sliding direction of thumbnails (horizontal/vertical) -->
             <var name="navarrows">true</var> <!-- Turn on/off on the thumbs navigation sides (true/false) -->
             <var name="navtype">slides</var> <!-- Sliding type of thumbnails (slides/thumbs) -->

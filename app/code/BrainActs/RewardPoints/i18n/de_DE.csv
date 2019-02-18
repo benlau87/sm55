@@ -1,0 +1,134 @@
+"Reward Points History","Reward Points History"
+"ID","ID"
+"Rule Name","Rule Name"
+"Points","Points"
+"Created","Created"
+"Reason",Reason
+Modifier,Modifier
+"Reward Points","Reward Points"
+Customer,Customer
+"Please fill email or name","Please fill email or name"
+Action,Action
+Delete,Delete
+"Are you sure you want to delete this?","Are you sure you want to delete this?"
+Reset,Reset
+"Save and Continue Edit","Save and Continue Edit"
+Save,Save
+Conditions,Conditions
+"Apply the rule only if the following conditions are met.","Apply the rule only if the following conditions are met."
+"Back To Rules","Back To Rules"
+"Delete Rule","Delete Rule"
+"Are you sure you want to do this?","Are you sure you want to do this?"
+"Save Rule","Save Rule"
+"Reward Points","Reward Points"
+"You deleted the history item.","You deleted the history item."
+"We can't find a history item to delete.","We can't find a history item to delete."
+History,History
+"Custom Update By Manager","Custom Update By Manager"
+"You apply additional rule to customer.","You apply additional rule to customer."
+"We can't  apply additional rule to customer.","We can't  apply additional rule to customer."
+"You deleted the rule.","You deleted the rule."
+"We can't delete the rule right now. Please review the log and try again.","We can't delete the rule right now. Please review the log and try again."
+"We can't find a rule to delete.","We can't find a rule to delete."
+"This rule no longer exists.","This rule no longer exists."
+"Edit Rule","Edit Rule"
+"New Rule","New Rule"
+"New Reward Points Rule","New Reward Points Rule"
+"Earning Rules","Earning Rules"
+"A total of %1 record(s) have been deleted.","A total of %1 record(s) have been deleted."
+"The wrong rule is specified.","The wrong rule is specified."
+"You saved the rule.","You saved the rule."
+"Something went wrong while saving the rule data. Please review the error log.","Something went wrong while saving the rule data. Please review the error log."
+"Manage Rules","Manage Rules"
+"This Rule no longer exists.","This Rule no longer exists."
+Rules,Rules
+"Spending Rules","Spending Rules"
+"This rule will conflict with another rule: ""%1""","This rule will conflict with another rule: ""%1"""
+"Page Title","Page Title"
+"Customer Group","Customer Group"
+Store,Store
+Amount,Amount
+Status,Status
+"To apply changes you should fill in hidden required ""%1"" field","To apply changes you should fill in hidden required ""%1"" field"
+"Something went wrong while saving the rule.","Something went wrong while saving the rule."
+"We cannot apply the reward points.","We cannot apply the reward points."
+"We applied ""%1"" points.","We applied ""%1"" points."
+"Page not found.","Page not found."
+Fixed,Fixed
+"For Each X Spend Customer Receive Y Points","For Each X Spend Customer Receive Y Points"
+" -- Without Restriction  -- "," -- Without Restriction  -- "
+Active,Active
+Inactive,Inactive
+Yes,Yes
+No,No
+Day(s),Day(s)
+"Cart %1 doesn't contain products","Cart %1 doesn't contain products"
+"Could not apply reward points","Could not apply reward points"
+"Spend Reward Points","Bonuspunkte verwenden"
+"End Date must follow Start Date.","End Date must follow Start Date."
+"Please specify a website.","Please specify a website."
+"Please specify Customer Groups.","Please specify Customer Groups."
+Enabled,Enabled
+Disabled,Disabled
+"You will receive %1 points after registration.","You will receive %1 points after registration."
+"%1 Reward Points have been added to your balance.","%1 Reward Points have been added to your balance."
+"You will receive %1 points for sharing the wish list.","You will receive %1 points for sharing the wish list."
+Registration,Registration
+"Submit Review","Submit Review"
+"Share Wish List","Share Wish List"
+Edit,Edit
+"Delete ${ $.$data.name }","Delete ${ $.$data.name }"
+"Are you sure you wan't to delete a ${ $.$data.name } record?","Are you sure you wan't to delete a ${ $.$data.name } record?"
+"Delete record for ${ $.$data.customer_name }","Delete record for ${ $.$data.customer_name }"
+"Are you sure you wan't to delete record for ${ $.$data.customer_name } ?","Are you sure you wan't to delete record for ${ $.$data.customer_name } ?"
+"All Store Views","All Store Views"
+"All Websites","All Websites"
+"Reward Points Information","Reward Points Information"
+"Current Points:","Current Points:"
+"You have %1 points.","You have %1 points."
+"Enter Points to Spend","Enter Points to Spend"
+"Apply Points","Apply Points"
+"You have %1 point(s)","You have %1 point(s)"
+"You have no reward points history.","You have no reward points history."
+"Apply Reward Points","Apply Reward Points"
+"Add/Remove Reward Points","Add/Remove Reward Points"
+Attention,Attention
+"The customer needs to be chosen from the drop-down. If you cannot find the customer, check if name or email is correct.","The customer needs to be chosen from the drop-down. If you cannot find the customer, check if name or email is correct."
+"Reward points was successfully applied.","Reward points was successfully applied."
+"You have %1 point(s). You can spend maximum %2 point(s).","You have %1 point(s). You can spend maximum %2 point(s)."
+"You have %1 points.(%2)","You have %1 points.(%2)"
+"Spend Rule","Spend Rule"
+"Earning Rule","Earning Rule"
+"Reward Points Section","Reward Points Section"
+"Extension Info","Extension Info"
+"Installed Version","Installed Version"
+"Latest Version","Latest Version"
+"General Options","General Options"
+"Enable at Front-End","Enable at Front-End"
+"Simple Rules","Simple Rules"
+"Cart Price Rule","Cart Price Rule"
+"Rule Information","Rule Information"
+Description,Description
+Websites,Websites
+"Customer Groups","Customer Groups"
+From,From
+To,To
+Priority,Priority
+Actions,Actions
+Type,Type
+"X Spend","X Spend"
+"Y Receive","Y Receive"
+"Discard subsequent rules","Discard subsequent rules"
+"Add Rule","Add Rule"
+"Delete items","Delete items"
+"Are you sure you wan't to delete selected items?","Are you sure you wan't to delete selected items?"
+Website,Website
+Start,Start
+End,End
+"Add/Remove Points","Add/Remove Points"
+"Store View","Store View"
+"Customer Name","Customer Name"
+Rule,Rule
+"Order ID","Order ID"
+"Page Information","Page Information"
+"Enable Rule","Enable Rule"

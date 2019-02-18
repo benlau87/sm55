@@ -1,0 +1,50 @@
+change mode:
+php bin/magento deploy:mode:show
+php bin/magento deploy:mode:set {developer/production} [-s|--skip-compilation]
+
+
+changing magneto versions:
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+rm -rf pub/static/*
+rm -rf var/view_preprocessed
+php bin/magento setup:static-content:deploy --force -t MageBig/martyfury en_US de_DE
+php bin/magento setup:static-content:deploy --force --area adminhtml de_DE en_US
+
+
+disable maintenance mode:
+php bin/magento maintenance:disable
+
+php bin/magento module:disable
+
+
+Core Änderung (Session Patch):
+/vendor/magento/framework/Session/SessionManager.php
+https://github.com/magento/magento2/pull/14973/files
+
+
+
+find . -type f -exec chmod 644 {} \;
+find . -type d -exec chmod 755 {} \;
+find ./var -type d -exec chmod 777 {} \;
+find ./pub/media -type d -exec chmod 777 {} \;
+find ./pub/static -type d -exec chmod 777 {} \;
+chmod 777 ./app/etc
+chmod 644 ./app/etc/*.xml
+
+
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
+php bin/magento cache:clean
+php bin/magento cache:flush
+
+
+Windows
+rmdir /s /q
+
+
+
+
+
+

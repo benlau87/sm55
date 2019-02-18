@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © BrainActs Commerce OÜ. All rights reserved.
+  ~ See LICENSE.txt for license details.
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+
+        <referenceContainer name="invoice_totals">
+            <block class="BrainActs\RewardPoints\Block\Adminhtml\Order\Creditmemo\View\Points" name="reward-points" template="BrainActs_RewardPoints::order/totals/points.phtml"/>
+        </referenceContainer>
+
+    </body>
+</page>

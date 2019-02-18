@@ -304,6 +304,22 @@
             </group>
             <group id="footer" translate="label" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
                 <label>Footer</label>
+                <field id="newsletter_form" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Subscribe Form</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="title_newsletter" translate="label comment" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Tilte</label>
+                    <depends>
+                        <field id="newsletter_form">1</field>
+                    </depends>
+                </field>
+                <field id="title_small_newsletter" translate="label comment" type="text" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Sub Tilte</label>
+                    <depends>
+                        <field id="newsletter_form">1</field>
+                    </depends>
+                </field>
                 <field id="cookie_position" translate="label comment" type="select" showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>Cookie Notice Position</label>
                     <options>

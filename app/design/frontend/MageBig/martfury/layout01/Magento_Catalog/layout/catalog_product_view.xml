@@ -25,17 +25,10 @@
         <move element="product.info.addto" destination="product.info" after="-" /> -->
 
         <referenceBlock name="product.info.mailto" remove="true" />
-        <referenceBlock name="product.info.addto" remove="true" />
+
         <referenceBlock name="catalog.product.related" remove="true" />
         <referenceBlock name="product.info.upsell" remove="true" />
-        <referenceBlock name="product.info.addtocart">
-            <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist" name="view.addto.wishlist"
-                       template="Magento_Catalog::product/view/addto/wishlist.phtml" />
-        </referenceBlock>
-        <referenceBlock name="product.info.addtocart.additional">
-            <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist" name="view.addto.wishlist.bottom"
-                   template="Magento_Catalog::product/view/addto/wishlist.phtml" />
-        </referenceBlock>
+
 
         <referenceContainer name="content">
             <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.wrap" template="Magento_Catalog::product/view-info.phtml" before="-">
@@ -50,8 +43,8 @@
         <move element="page.main.title" destination="product.info.wrap" />
         <move element="product.info.review" destination="product.info.wrap" />
         <move element="product.info.sku" destination="product.info.wrap" />
-        <move element="product.info.stock.sku" destination="product.info.price" after="product.price.final" />
-        <move element="product.info.overview" destination="product.info.price" after="product.info.stock.sku" />
+        <move element="product.info.overview" destination="product.info.price" after="product.info.sku" />
+        <move element="product.info.stock.sku" destination="product.info.price" after="product.info.overview" />
 
         <!-- <referenceContainer name="product.info">
             <container name="product.info.staticblock" label="Product Static Block" htmlTag="div" htmlClass="product-info-staticblock" before="-" />

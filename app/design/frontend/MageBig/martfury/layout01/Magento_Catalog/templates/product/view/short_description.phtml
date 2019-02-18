@@ -42,4 +42,15 @@ if ($_attributeType && $_attributeType == 'text') {
     <div id="short_description_content" class="value" <?= /* @escapeNotVerified */ $_attributeAddAttribute;?>><?= /* @escapeNotVerified */ $_attributeValue; ?></div>
 </div>
 <?php endif; ?>
+<div class="estimated-delivery-date">
+    <?php
+    $stockItem = $_product->getExtensionAttributes()->getStockItem();
+    print_r($stockItem->getQty());
+
+    if($stockItem->getQty() > 0) {
+        echo 'Artikel auf Lager - Lieferzeit in 1-3 Werktage';
+    }
+    ?>
+</div>
+
 

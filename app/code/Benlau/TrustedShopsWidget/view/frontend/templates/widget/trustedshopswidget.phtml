@@ -1,0 +1,43 @@
+<?php
+$display_type = $this->getDisplayType();
+$tsData = $this->getTsData();
+$tsSnippet = $this->getTsSnippet();
+
+if($display_type == 'image' || $display_type == 'rating') {
+    if (is_array($tsData)) :
+        $rating_value = $tsData['result'];
+        $count = $tsData['count'];
+        $shopName = $tsData['shopName'];
+        $max = $tsData['max'];
+
+        if($display_type == 'rating')
+            echo $rating_value . ' / ' . $max;
+        else {
+        ?>
+        <div class="trusted-shops-widget">
+            <div class="rating" style="width: <?= number_format(100 * ($rating_value / 5), 0, '.', ','); ?>px;"></div>
+            <span class="rating-text">
+        <?php
+        if ($rating_value >= 4.499)
+            echo 'Sehr gut';
+        elseif ($rating_value >= 3.499)
+            echo 'Gut';
+        elseif ($rating_value >= 2.499)
+            echo 'Befriedigend';
+        elseif ($rating_value >= 1.499)
+            echo 'Ausreichend';
+        elseif ($rating_value >= 0.499)
+            echo 'Mangelhaft';
+        ?>
+    </span>
+            <span class="rating-value">
+        <strong><?= number_format($rating_value, 2, '.', ','); ?></strong> /
+                <?= number_format($max, 2, '.', ','); ?>
+    </span>
+        </div>
+    <?php }
+    endif;
+} elseif($display_type == 'snippet') {
+    echo $tsSnippet;
+}
+

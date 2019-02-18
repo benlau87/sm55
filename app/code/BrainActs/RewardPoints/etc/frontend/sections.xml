@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright © BrainActs Commerce OÜ. All rights reserved.
+  ~ See LICENSE.txt for license details.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Customer:etc/sections.xsd">
+    <action name="checkout/onepage/saveOrder">
+        <section name="reward"/>
+    </action>
+
+    <action name="rest/*/V1/carts/*/payment-information">
+        <section name="reward"/>
+    </action>
+</config>

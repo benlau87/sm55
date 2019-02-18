@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="benlau_trustedshopswidget" class="Benlau\TrustedShopsWidget\Block\Widget\TrustedShopsWidget">
+		<label>Trusted Shops Widget</label>
+		<description>Get rating via Trusted Shops API</description>
+		<parameters>
+			<parameter name="trustedshopsid" xsi:type="text"  visible="true">
+				<label>Trusted Shops ID</label>
+			</parameter>
+			<parameter name="display_type" xsi:type="select" visible="true">
+				<label>Anzeige-Typ</label>
+				<options>
+					<option name="image" value="image" selected="true">
+						<label>Bild (Startseite)</label>
+					</option>
+					<option name="snippet" value="snippet">
+						<label>Snippet (Kategorie- und Produktseite)</label>
+					</option>
+					<option name="rating" value="rating">
+						<label>Nur Rating</label>
+					</option>
+				</options>
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>

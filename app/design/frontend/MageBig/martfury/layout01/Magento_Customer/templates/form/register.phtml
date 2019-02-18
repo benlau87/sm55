@@ -23,14 +23,6 @@
             <input type="hidden" name="success_url" value="<?= $block->escapeUrl($block->getSuccessUrl()) ?>">
             <input type="hidden" name="error_url" value="<?= $block->escapeUrl($block->getErrorUrl()) ?>">
             <?= $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setObject($block->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
-            <?php if ($block->isNewsletterEnabled()): ?>
-                <div class="field choice newsletter">
-                    <input type="checkbox" name="is_subscribed" title="<?= $block->escapeHtmlAttr(__('Sign Up for Newsletter')) ?>" value="1" id="is_subscribed"<?php if ($block->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox">
-                    <label for="is_subscribed" class="label"><span><?= $block->escapeHtml(__('Sign Up for Newsletter')) ?></span></label>
-                </div>
-                <?php /* Extensions placeholder */ ?>
-                <?= $block->getChildHtml('customer.form.register.newsletter') ?>
-            <?php endif ?>
 
             <?php $_dob = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Dob') ?>
             <?php if ($_dob->isEnabled()): ?>
@@ -45,6 +37,15 @@
             <?php $_gender = $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Gender') ?>
             <?php if ($_gender->isEnabled()): ?>
                 <?= $_gender->setGender($block->getFormData()->getGender())->toHtml() ?>
+            <?php endif ?>
+
+            <?php if ($block->isNewsletterEnabled()): ?>
+                <div class="field choice newsletter">
+                    <input type="checkbox" name="is_subscribed" title="<?= $block->escapeHtmlAttr(__('Sign Up for Newsletter')) ?>" value="1" id="is_subscribed"<?php if ($block->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox">
+                    <label for="is_subscribed" class="label"><span><?= $block->escapeHtml(__('Sign Up for Newsletter')) ?></span></label>
+                </div>
+                <?php /* Extensions placeholder */ ?>
+                <?= $block->getChildHtml('customer.form.register.newsletter') ?>
             <?php endif ?>
         </fieldset>
         <?php if ($block->getShowAddressFields()): ?>
