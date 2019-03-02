@@ -20,6 +20,9 @@
 					<option name="rating" value="rating">
 						<label>Nur Rating</label>
 					</option>
+					<option name="shop_reviews" value="shop_reviews">
+						<label>Shop-Bewertungen</label>
+					</option>
 				</options>
 			</parameter>
 		</parameters>

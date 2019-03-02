@@ -33,7 +33,21 @@ HTML;
     exit(1);
 }
 
-$bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
-/** @var \Magento\Framework\App\Http $app */
-$app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
+$params = $_SERVER;
+$domain2store = array(
+    'sm55.localhost'=>'default',
+    'cosmetics55.localhost'=>'cosmetics55_de'
+);
+if(isset($domain2store[$_SERVER['HTTP_HOST']]))
+    $storecode = $domain2store[$_SERVER['HTTP_HOST']];
+$params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = isset($storecode) ? $storecode : '';
+$params[\Magento\Store\Model\StoreManager::PARAM_RUN_TYPE] = 'store';
+$bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $params);
+$app = $bootstrap->createApplication('Magento\Framework\App\Http');
 $bootstrap->run($app);
+
+/*
+$bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
+/** @var \Magento\Framework\App\Http $app
+$app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
+$bootstrap->run($app);*/

@@ -29,12 +29,10 @@ class TrustedShopsWidget extends \Magento\Framework\View\Element\Template implem
     }
 
     public function getDisplayType() {
-        if ($this->getData('display_type') == 'image' || $this->getData('display_type') == '')
-            return 'image'; // default
-        elseif ($this->getData('display_type') == 'snippet')
-            return 'snippet';
+        if($this->getData('display_type') == '')
+            return 'image';
         else
-            return 'rating';
+            return $this->getData('display_type');
     }
 
     private function trustedshopscachecheck($filename_cache, $timeout = 10800) {
@@ -49,7 +47,7 @@ class TrustedShopsWidget extends \Magento\Framework\View\Element\Template implem
         $tmpDir = $this->_dir->getPath('tmp'); // Output: /var/www/html/myproject/var/tmp
         $cacheFileName = $tmpDir . '/' . $tsId . '.json';
         $cacheTimeOut = 43200; // half a day
-        $apiUrl = 'http://api.trustedshops.com/rest/public/v2/shops/' . $tsId . '/quality/reviews.json';
+        $apiUrl = 'https://api.trustedshops.com/rest/public/v2/shops/' . $tsId . '/quality/reviews.json';
         $reviewsFound = false;
 
         // check if cached version exists
@@ -57,7 +55,10 @@ class TrustedShopsWidget extends \Magento\Framework\View\Element\Template implem
             // load fresh from API
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 1); // times out after 4s
             curl_setopt($ch, CURLOPT_POST, false);
             curl_setopt($ch, CURLOPT_URL, $apiUrl);
             $output = curl_exec($ch); curl_close($ch);
@@ -86,6 +87,72 @@ class TrustedShopsWidget extends \Magento\Framework\View\Element\Template implem
             return false;
     }
 
+
+    public function getTsShopReviews() {
+        $tsId = $this->getTsId();
+        $tmpDir = $this->_dir->getPath('tmp'); // Output: /var/www/html/myproject/var/tmp
+        $cacheFileName = $tmpDir . '/' . $tsId . '-shop-reviews.json';
+        $cacheTimeOut = 43200; // half a day
+        $apiUrl = 'https://api.trustedshops.com/rest/public/v2/shops/' . $tsId . '/reviews.json';
+
+        // check if cached version exists
+        if (!$this->trustedshopscachecheck($cacheFileName, $cacheTimeOut)) {
+            // load fresh from API
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 1); // times out after 4s
+            curl_setopt($ch, CURLOPT_POST, false);
+            curl_setopt($ch, CURLOPT_URL, $apiUrl);
+            $output = curl_exec($ch); curl_close($ch);
+            // Write the contents back to the file
+            // Make sure you can write to file's destination
+            file_put_contents($cacheFileName, $output);
+        }
+        if ($jsonObject = json_decode(file_get_contents($cacheFileName), true)) {
+            $reviews = $jsonObject['response']['data']['shop']['reviews'];
+
+            $i=0;
+
+            foreach($reviews as $review) {
+                $date = $review['creationDate'];
+                $comment = $review['comment'];
+                $date = date("d.m.Y", strtotime($date));
+
+                echo 'Datum: ' . $date . '<br>';
+                echo 'Kommentar: ' . $comment . '<br>';
+
+                foreach($review['criteria'] as $criteria) {
+                    $mark = $criteria['mark'];
+
+                    switch($criteria['type']) {
+                        case 'DELIVERY':
+                            $criteria_title = 'Lieferung';
+                            break;
+                        case 'GOODS':
+                            $criteria_title = 'Ware';
+                            break;
+                        case 'SERVICE':
+                            $criteria_title = 'Service';
+                            break;
+                        default:
+                            $criteria_title = 'Gesamt';
+                    }
+
+                    echo $criteria_title . ': ' . $mark . '<br>';
+                }
+
+                $overall_mark = $review['mark'];
+
+                echo 'Gesamt: ' . $overall_mark . '<br><br>';
+
+                $i++;
+                if($i==5) break;
+            }
+        }
+    }
 
     public function getTsSnippet() {
         $tsData = $this->getTsData();

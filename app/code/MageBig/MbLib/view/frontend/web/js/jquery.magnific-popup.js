@@ -895,9 +895,9 @@
 
             closeMarkup: '<button title="%title%" type="button" class="mfp-close">&#215;</button>',
 
-            tClose: 'Close (Esc)',
+            tClose: 'Schließen (Esc)',
 
-            tLoading: 'Loading...',
+            tLoading: 'Lade...',
 
             autoFocusLast: true
 

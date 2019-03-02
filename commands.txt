@@ -6,9 +6,14 @@ php bin/magento deploy:mode:set {developer/production} [-s|--skip-compilation]
 changing magneto versions:
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
+
+php bin/magento setup:static-content:deploy --force -t Benlau/sm55 en_US de_DE
+php bin/magento setup:static-content:deploy --force --area adminhtml de_DE en_US
+
 rm -rf pub/static/*
 rm -rf var/view_preprocessed
-php bin/magento setup:static-content:deploy --force -t MageBig/martyfury en_US de_DE
+
+php bin/magento setup:static-content:deploy --force -t Benlau/sm55 en_US de_DE
 php bin/magento setup:static-content:deploy --force --area adminhtml de_DE en_US
 
 

@@ -39,5 +39,9 @@ if($display_type == 'image' || $display_type == 'rating') {
     endif;
 } elseif($display_type == 'snippet') {
     echo $tsSnippet;
+} elseif($display_type == 'shop_reviews') {
+    $shopReviews = $this->getTsShopReviews();
+
+    echo $shopReviews;
 }
 
